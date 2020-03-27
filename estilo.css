@@ -8,7 +8,7 @@ body {
   }
   .boton {
     display: block;
-    margin: 5px 5px 5px;
+    margin: 10px 5px 5px;
     font-family: "Arial";
     padding: 1rem 5rem;
     font-size: 1.25rem;
@@ -30,19 +30,19 @@ body {
     border-color: #0162ca;
   }
 .borde {
-    margin: 0 auto;
-    width: 70%;
-    background-color: #ffffff;
-    padding: 4rem 0rem;
-    border-radius: .6rem;
+  margin: 0 auto;
+  width: 80%;
+  background-color: #ffffff;
+  padding: 2rem 1rem;
+  border-radius: .6rem;
 }
-.form {
+.input {
   display: block;
-  width: 100%;
-  height: calc(2.25rem + 2px);
-  padding: .375rem .75rem;
+  width: 97%;
+  height: 2rem;
+  padding: 0.5rem .75rem;
   font-size: 1rem;
-  font-weight: 400;
+  font-weight: 1rem;
   line-height: 1.5;
   color: #495057;
   background-color: rgb(255, 255, 255);
@@ -51,4 +51,32 @@ body {
   border-radius: .25rem;
   box-shadow: inset 0 0 0 transparent;
   transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+}
+
+p {
+  font-family: Arial;
+}
+.submit {
+  display: block;
+  width: 96%;
+  font-family: "Arial";
+  padding: 1rem 5rem;
+  font-size: 1.25rem;
+  line-height: 1;
+  border-radius: .3rem;
+  color: #fff;
+  background-color: #007bff;
+  border-color: #007bff;
+  box-shadow: none;
+  text-decoration: none;
+  transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+  transition-property: color, background-color, border-color, box-shadow;
+  transition-duration: 0.15s, 0.15s, 0.15s, 0.15s;
+  transition-timing-function: ease-in-out, ease-in-out, ease-in-out, ease-in-out;
+  transition-delay: 0s, 0s, 0s, 0s;
+  cursor: pointer;
+}
+.submit:hover {
+  background-color: #0162ca;
+  border-color: #0162ca;
 }
