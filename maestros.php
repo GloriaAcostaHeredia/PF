@@ -4,18 +4,18 @@
         <title>Sistema de Control de Maestros</title>
         <link rel="stylesheet" href="estilo.css">
     </head>
-    <form action="conexion.php" method="post"/>
     <body>
-    <center> <h1> Sistema de Control de Maestros</h1></center>
-<p>Nombre: <input type="text" name="nombre" required/>   
-   e-mail: <input type="email" name="email" required/>
-   Numero de empleado <input type="text" name="N.Empleado" required>
-   Telefono de contacto: <input type="text"name="telefono" required></p>
-
-<p>
-<center><input type="submit" value="Enviar!"> 
-   <input type="reset" value="borrar todo">
-   </center></p>
-</form>
+        <h1 class="centro">Control de Maestros</h1>
+        <form action="conexion.php" method="post">
+        <div class="borde">
+        <p>Nombre:</p><input type="text" class="input" name="nombre" required/>
+        <p>Correo Electronico:</p><input type="email" class="input" name="email" required/>  
+        <p>Numero de Empleado:</p><input type="number" class="input" name="numemp" required/>
+        <p>Telefono de Contacto:</p><input type="number" class="input" name="telefono" required/>
+        <br>
+        <div class="borde"> 
+            <input type="submit" class="submit" value="Guardar">
+        </div>
+        </form>
 </body>
 </html>
