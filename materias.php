@@ -1,22 +1,56 @@
-
-<!DOCTYPE html>
 <html>
     <head>
         <title>Sistema de Control de Materias</title>
         <link rel="stylesheet" href="estilo.css">
+        <link rel="stylesheet" href="estilo2.css">
+        <meta charset = "UTF-8">
     </head>
-    <form action="bdconnect.php" method="post"/>
     <body>
-    <center> <h1> Sistema de Control de Materias</h1></center>
-<p>Nombre Del Grupo: <input type="text" class="input" name="nombre" required/>   
-   Clave: <input type="text" class="input" name="clave" required></p>
-
-   <div class="borde"> 
-            <center>
-            <input type="submit" class="submit" value="Enviar!">
-            <a class="boton" href="index.html"> Regresar </a> </center>
+        <h1 class="centro">Control de Materias</h1>
+        <form action="materias.php" method="post">
+        <div class="borde">
+        <p>Nombre:</p><input type="text" class="input" name="info[nombre]" required/>
+        <p>Clave de Materia:</p><input type="number" class="input" name="info[clave]" required/>
+        <br>
+        <div class="borde"> 
+            <input type="submit" class="submit" value="Guardar">
+            <br>
+            <a class="submit2" href="index.html">Volver</a>
         </div>
-   </center></p>
-</form>
+        </form>
+        <?php
+            require "dbconnect.php";
+            if ($conexion) {
+                if ($_POST) {
+                    $array = $_POST["info"];
+                    $nombre = $array["nombre"];
+                    $clave = $array["clave"];
+                    $sql = "INSERT INTO materias(clave, nombre) VALUES ('$clave', '$nombre')";
+                    $query = mysqli_query($conexion, $sql);
+                    if ($query) {
+                        ?>
+                        <br>
+                        <div class="exito">
+                        <h3>Datos Guardados Exitosamente!</h3>
+                        </div>
+                        <?php
+                    }else {
+                        ?>
+                        <br>
+                        <div class="error">
+                        <h3>Ha Ocurrido un error, comuniquese con el administrador</h3>
+                        </div>
+                        <?php
+                    }
+                }
+            }else {
+                ?>
+                <br>
+                <div class="error">
+                <h3>Ha Ocurrido un error, comuniquese con el administrador</h3>
+                </div>
+                <?php
+            }
+        ?>
 </body>
 </html>
