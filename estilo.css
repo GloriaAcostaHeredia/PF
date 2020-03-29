@@ -7,6 +7,7 @@ body {
     text-align: center;
   }
   .boton {
+    text-align: center;
     display: block;
     margin: 10px 5px 5px;
     font-family: "Arial";
@@ -38,19 +39,18 @@ body {
 }
 .input {
   display: block;
-  width: 97%;
-  height: 2rem;
-  padding: 0.5rem .75rem;
-  font-size: 1rem;
-  font-weight: 1rem;
-  line-height: 1.5;
-  color: #495057;
-  background-color: rgb(255, 255, 255);
-  background-clip: padding-box;
-  border: 1px solid #ced4da;
-  border-radius: .25rem;
-  box-shadow: inset 0 0 0 transparent;
-  transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+    width: 100%;
+    height: 2rem;
+    font-size: 1rem;
+    font-weight: 1rem;
+    line-height: 1.5;
+    color: #495057;
+    background-color: rgb(255, 255, 255);
+    background-clip: padding-box;
+    border: 1px solid #ced4da;
+    border-radius: .25rem;
+    box-shadow: inset 0 0 0 transparent;
+    transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
 }
 
 p {
@@ -58,7 +58,7 @@ p {
 }
 .submit {
   display: block;
-  width: 96%;
+  width: 100%;
   font-family: "Arial";
   padding: 1rem 5rem;
   font-size: 1.25rem;
