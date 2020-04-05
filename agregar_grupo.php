@@ -267,27 +267,29 @@
                     //comprobar si la conexion es exitosa
                     if ($query) {
                         ?>
-                        <br>
-                        <div class="exito">
-                        <h3>Datos Guardados Exitosamente!</h3>
+                        <div class="alert alert-success alert-dismissible">
+                        <button type="button" class="close" data-dismiss="alert" aria-hidden="true">×</button>
+                        <h5><i class="icon fas fa-check"></i> Listo!!</h5>
+                        Datos Guardados con Exito.
                         </div>
                         <?php
                     }else {
                         ?>
-                        <br>
-                        <div class="error">
-                        <!--En caso de error se imprime un mensaje donde se avisa que ha habido un error-->
-                        <h3>Ha Ocurrido un error, comuniquese con el administrador</h3>
+                        <div class="alert alert-danger alert-dismissible">
+                        <button type="button" class="close" data-dismiss="alert" aria-hidden="true">×</button>
+                        <h5><i class="icon fas fa-ban"></i> Error!!</h5>
+                        Ha ocurrido un error durante el proceso, comuniquese con el administrador .
                         </div>
                         <?php
                     }
                 }
                 }else {
                 ?>
-                <br>
-                <div class="error">
-                <h3>Ha Ocurrido un error, comuniquese con el administrador</h3>
-                </div>
+                        <div class="alert alert-danger alert-dismissible">
+                        <button type="button" class="close" data-dismiss="alert" aria-hidden="true">×</button>
+                        <h5><i class="icon fas fa-ban"></i> Error!!</h5>
+                        Ha ocurrido un error durante el proceso, comuniquese con el administrador .
+                        </div>
                 <?php
                  }
               ?>
